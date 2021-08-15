@@ -23,5 +23,5 @@ wget https://gitlab.com/OrangeFox/vendor/recovery/-/raw/master/security/miui.x50
 source build/envsetup.sh
 export ALLOW_MISSING_DEPENDENCIES=true
 export LC_ALL="C"
-lunch omni_apollo-eng && mka recoveryimage
-transfer wet /drone/fox_10.0/out/target/product/apollo/*.zip
+#lunch omni_apollo-eng && mka recoveryimage
+#transfer wet /drone/fox_10.0/out/target/product/apollo/*.zip
