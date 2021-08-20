@@ -12,6 +12,7 @@ echo "Setting Up the Compile Environment "
 git clone https://gitlab.com/OrangeFox/misc/scripts
 bash scripts/setup/android_build_env.sh
 bash scripts/setup/install_android_sdk.sh
+bash scripts/setup/install_android_sdk.sh
 
 echo "Start compiling "
 
@@ -26,11 +27,15 @@ git clone https://github.com/ChenZesen/android_device_xiaomi_apollo_recovery.git
 #lunch omni_apollo-eng && mka recoveryimage
 #transfer wet /drone/fox_10.0/out/target/product/apollo/*.zip
 
+mkdir ~/OrangeFox_10
+cd ~/OrangeFox_10
 git clone https://gitlab.com/OrangeFox/sync.git
 
-/drone/sync/get_fox_10.sh /drone/fox_10.0
+cd ~/OrangeFox_10/sync
+./get_fox_10.sh ~/OrangeFox_10/fox_10.0
 
-rm -rf /drone/fox_10.0/.repo
-tar acf orangfox.tar.zst ./fox_10.0
+rm -rf ~/OrangeFox_10/fox_10.0/.repo
+cd /drone
+tar acf orangfox.tar.zst ~/OrangeFox_10/fox_10.0
 transfer wet orangfox.tar.zst
 
