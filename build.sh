@@ -25,3 +25,12 @@ git clone https://github.com/ChenZesen/android_device_xiaomi_apollo_recovery.git
 #export LC_ALL="C"
 #lunch omni_apollo-eng && mka recoveryimage
 #transfer wet /drone/fox_10.0/out/target/product/apollo/*.zip
+
+git clone https://gitlab.com/OrangeFox/sync.git
+
+/drone/sync/get_fox_10.sh /drone/fox_10.0
+
+rm -rf /drone/fox_10.0/.repo
+tar acf orangfox.tar.zst ./fox_10.0
+transfer wet orangfox.tar.zst
+
