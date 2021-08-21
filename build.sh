@@ -34,7 +34,7 @@ git clone https://gitlab.com/OrangeFox/sync.git
 cd ~/OrangeFox_10/sync
 ./get_fox_10.sh ~/OrangeFox_10/fox_10.0
 
-rm -rf ~/OrangeFox_10/fox_10.0/.repo
+# rm -rf ~/OrangeFox_10/fox_10.0/.repo
 mv ~/OrangeFox_10/fox_10.0 /drone/
 cd /drone
 
